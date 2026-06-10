@@ -81,7 +81,7 @@ namespace RenderJoy
         AZ::RPI::PipelineStateForDraw m_pipelineStateForDraw;
     
         // The draw item submitted by this pass
-        AZ::RHI::GeometryView m_geometryView;
+        AZ::RHI::GeometryView m_geometryView{ AZ::RHI::MultiDevice::AllDevices };
         AZ::RHI::DrawItem m_item;
     
         // The stencil reference value for the draw item

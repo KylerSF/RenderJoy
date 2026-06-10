@@ -74,7 +74,7 @@ namespace RenderJoy
         AZ::Data::Instance<AZ::RPI::Shader> m_shader;
 
         // The draw item submitted by this pass
-        AZ::RHI::GeometryView m_geometryView;
+        AZ::RHI::GeometryView m_geometryView{ AZ::RHI::MultiDevice::AllDevices };
         AZ::RHI::DrawItem m_item;
 
         // The stencil reference value for the draw item
